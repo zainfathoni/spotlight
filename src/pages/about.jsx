@@ -37,6 +37,13 @@ function MailIcon(props) {
   )
 }
 
+const linkClassName =
+  'text-teal-500 underline transition hover:text-teal-600 dark:hover:text-teal-400'
+
+function ExternalLink(props) {
+  return <a className={linkClassName} {...props} />
+}
+
 export default function About() {
   return (
     <>
@@ -73,45 +80,133 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                Hello! I am Zain. You might know me from{' '}
+                <Link
+                  href="/speaking"
+                  aria-label="My JSConf Asia 2019 talk"
+                  className={linkClassName}
+                >
+                  my talk
+                </Link>{' '}
+                at{' '}
+                <ExternalLink
+                  href="https://2019.jsconf.asia#program"
+                  aria-label="JSConf Asia 2019 program"
+                >
+                  JSConf Asia 2019
+                </ExternalLink>{' '}
+                or my recent contribution at the{' '}
+                <ExternalLink href="https://www.wargabantuwarga.com/">
+                  WargaBantuWarga
+                </ExternalLink>{' '}
+                and{' '}
+                <ExternalLink
+                  href="https://kawalcovid19.id/tentang-kami"
+                  className={linkClassName}
+                >
+                  KawalCOVID19
+                </ExternalLink>{' '}
+                community.
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
+                I currently work as a{' '}
+                <ExternalLink href="https://www.linkedin.com/in/zainfathoni/">
+                  Senior Software Engineer
+                </ExternalLink>{' '}
+                at{' '}
+                <ExternalLink href="https://www.ninjavan.co/en-sg/">
+                  Ninja Van
+                </ExternalLink>
+                , previously venturing at{' '}
+                <ExternalLink href="https://www.xtremax.com/">
+                  Xtremax
+                </ExternalLink>{' '}
+                and{' '}
+                <ExternalLink href="https://www.bukalapak.com/">
+                  Bukalapak
+                </ExternalLink>
+                . I live in Singapore{' '}
+                <span role="img" aria-label="Singaporean Flag">
+                  🇸🇬
+                </span>{' '}
+                with my Indonesian{' '}
+                <span role="img" aria-label="Indonesian Flag">
+                  🇮🇩
+                </span>{' '}
+                wife 👰🏻 and two kids 👧🏻👦🏻.
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
+                To channel my enthusiasm for React, JavaScript, & frontend
+                development in general, I co-organize a{' '}
+                <ExternalLink href="https://reactjs.id">ReactJS </ExternalLink>{' '}
+                and a{' '}
+                <ExternalLink href="https://feid.dev">
+                  Frontend Developer community in Indonesia
+                </ExternalLink>
+                . I love sharing my learning journey to the community by giving{' '}
+                <Link href="/speaking" className={linkClassName}>
+                  a few talks
+                </Link>{' '}
+                and writing some articles in Bahasa Indonesia at{' '}
+                <ExternalLink href="https://medium.com/pejuang-kode">
+                  Pejuang Kode
+                </ExternalLink>{' '}
+                Medium publication and{' '}
+                <ExternalLink href="https://www.pejuangkode.com">
+                  pejuangkode.com
+                </ExternalLink>{' '}
+                website to help my fellow Indonesian developers learn.
               </p>
               <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                I have been leading the tech team of{' '}
+                <ExternalLink href="https://kawalcovid19.id">
+                  KawalCOVID19
+                </ExternalLink>{' '}
+                community for the past few months to disseminate valid
+                information regarding the COVID-19 pandemic in Indonesia.
+              </p>
+              <p>
+                Recently, I also gathered a community of Indonesian learners
+                around me in a{' '}
+                <ExternalLink href="https://zainf.dev/discord">
+                  Discord Server
+                </ExternalLink>
+                . If you have any question for me, join us at my brand new{' '}
+                <ExternalLink href="https://zainf.dev/discord">
+                  <strong>Pejuang Kode</strong> Discord Server
+                </ExternalLink>{' '}
+                and raise your questions over there! We would love to keep in
+                touch with you. 😉
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
+              <SocialLink
+                href="https://twitter.com/zainfathoni/"
+                icon={TwitterIcon}
+              >
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+              <SocialLink
+                href="https://instagram.com/zain.fathoni"
+                icon={InstagramIcon}
+                className="mt-4"
+              >
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+              <SocialLink
+                href="https://github.com/zainfathoni/"
+                icon={GitHubIcon}
+                className="mt-4"
+              >
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+              <SocialLink
+                href="https://www.linkedin.com/in/zainfathoni"
+                icon={LinkedInIcon}
+                className="mt-4"
+              >
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
